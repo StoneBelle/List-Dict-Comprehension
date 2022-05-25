@@ -18,3 +18,25 @@ print(f"dict comp from list {geo_students_dict}")
 # TODO 1.1: Create new dict that contains ONLY the geo students with a grade 60 or higher.
 passed_geo_students = {student: grade for (student, grade) in geo_students_dict.items() if grade >= 60}
 print(passed_geo_students)
+
+# TODO 2: Create a new dict that takes each word in the sentence list and calculates the num of letters in each word.
+sentence = "What is the Airspeed Velocity of an Unladen Swallow?"
+word_char_count = {word: len(word) for word in sentence.split()}
+print(sentence.split())
+print(word_char_count)
+
+# TODO 3: Create a new dict that takes each temp in degrees Celsius adn converts it into degree Fahrenheit.
+# C to F formula: (temp_c * 9/5) + 32 = temp_f
+
+weather_c = {
+    "Monday": 12,
+    "Tuesday": 14,
+    "Wednesday": 15,
+    "Thursday": 14,
+    "Friday": 21,
+    "Saturday": 22,
+    "Sunday": 24,
+}
+
+weather_f = {day: (temp_c * 9 / 5) + 32 for (day, temp_c) in weather_c.items()}
+print(weather_f)
